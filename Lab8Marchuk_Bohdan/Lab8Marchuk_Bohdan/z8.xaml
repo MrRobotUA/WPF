@@ -1,0 +1,44 @@
+﻿<Window x:Class="Lab8Marchuk_Bohdan.z8"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab8Marchuk_Bohdan"
+        mc:Ignorable="d"
+        Title="z8" Height="450" Width="990.5">
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded"/>
+    </Window.Triggers>
+    <Grid>
+        <Canvas>
+            <Rectangle Canvas.Left="20" Canvas.Top="10"  Width="160" Height="80" Fill="red" 
+                 x:Name="myEllipse" StrokeThickness="3">
+                <Rectangle.Stroke>
+                    <SolidColorBrush Color="Black" x:Name="myStroke" />
+                </Rectangle.Stroke>
+                <Rectangle.Triggers>
+                    <EventTrigger RoutedEvent="Ellipse.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="myStroke" 
+                            Storyboard.TargetProperty="Color" 
+                            To="Yellow" Duration="0:0:3" 
+                            BeginTime="0:0:2" 
+                            FillBehavior="HoldEnd"
+                            RepeatBehavior="Forever" />
+                                <DoubleAnimation RepeatBehavior="Forever"
+                                   Storyboard.TargetName="myEllipse"
+                                   Storyboard.TargetProperty="StrokeThickness" 
+                                   From="5" To="50"
+                                   Duration="0:0:5" 
+                                   AutoReverse="True"  />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Rectangle.Triggers>
+            </Rectangle>
+            <TextBlock Canvas.Left="20" TextWrapping="Wrap" Text="8. Модифікувати приклад 4 лекції 8 заміною еліпса на квадрат." Canvas.Top="123" FontSize="16" FontWeight="Bold"/>
+        </Canvas>
+
+    </Grid>
+</Window>

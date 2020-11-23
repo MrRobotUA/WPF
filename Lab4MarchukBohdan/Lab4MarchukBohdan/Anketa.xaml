@@ -1,0 +1,38 @@
+﻿<Window x:Class="Lab4MarchukBohdan.Anketa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab4MarchukBohdan"
+        mc:Ignorable="d"
+        Title="Anketa" Height="450" Width="800">
+    <Grid ShowGridLines="True">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                <GradientStop Color="#FF111B7C" Offset="0" />
+                <GradientStop Color="#FF83361F" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Button Content="Зберегти" Grid.Row="1" Height="32" HorizontalAlignment="Left" Name="button1" VerticalAlignment="Top" Width="70" Margin="12,34,0,0" />
+        <Button Content="Відмінити" Grid.Row="1" Height="30" HorizontalAlignment="Left" Margin="87,36,0,0" Name="button2" VerticalAlignment="Top" Width="70" />
+        <TextBlock Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="64,10,0,0" x:Name="textBlock1" Text="Анкета Викладача" VerticalAlignment="Top" Foreground="#CDEBECD1" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" />
+        <TextBlock Grid.Column="0" Height="23" HorizontalAlignment="Left" Margin="5,14,0,0" x:Name="textBlock1_Copy" Text="Прізвище, ім'я, по батькові: ПіБ" VerticalAlignment="Top" Foreground="#CDEBECD1" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" />
+        <TextBlock Grid.Column="0" Height="23" HorizontalAlignment="Left" Margin="11,36,0,0" x:Name="textBlock1_Copy1" Text="Дата Народження: 00-00-0000" VerticalAlignment="Top" Foreground="#CDEBECD1" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" />
+        <TextBlock Grid.Column="0" Height="23" HorizontalAlignment="Left" Margin="12,59,0,0" x:Name="textBlock1_Copy2" Text="Посада: Посада" VerticalAlignment="Top" Foreground="#CDEBECD1" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" />
+        <TextBlock Grid.Column="0" Height="23" HorizontalAlignment="Left" Margin="12,82,0,0" x:Name="textBlock1_Copy3" Text="Стаж роботи: 00" VerticalAlignment="Top" Foreground="#CDEBECD1" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" />
+        <TextBlock Grid.Column="2" Height="23" HorizontalAlignment="Left" Margin="10,14,0,0" x:Name="textBlock1_Copy4" Text="Фото: " VerticalAlignment="Top" Foreground="#CDEBECD1" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" />
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="147,114,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="100"/>
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="129" Margin="68,14,0,0" VerticalAlignment="Top" Width="100" Source="a4b2cf52d8ed2e49e10c7eecca6777a3.gif"/>
+        <Button Content="Вихід" Grid.Row="1" Height="30" HorizontalAlignment="Left" Margin="162,36,0,0" x:Name="button2_Copy" VerticalAlignment="Top" Width="70" />
+    </Grid>
+
+</Window>

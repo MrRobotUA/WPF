@@ -1,0 +1,122 @@
+﻿<Window x:Class="Lab8Marchuk_Bohdan.z5"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab8Marchuk_Bohdan"
+        mc:Ignorable="d"
+        Title="z5" Height="450" Width="990.5">
+    <Window.Resources>
+
+        <Storyboard x:Key="OnLoaded1">
+
+
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="elp" Duration="0:0:2" AutoReverse="True" DecelerationRatio="1"
+        RepeatBehavior="Forever"  >
+
+                <SplineDoubleKeyFrame  KeyTime="0%" Value="-60" />
+                <SplineDoubleKeyFrame  KeyTime="33%" Value="-89" />
+                <SplineDoubleKeyFrame  KeyTime="66%" Value="-60" />
+                <SplineDoubleKeyFrame  KeyTime="99%" Value="-24" />
+
+
+
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="elp" Duration="0:0:2" AutoReverse="True" DecelerationRatio="1"
+        RepeatBehavior="Forever">
+                <EasingColorKeyFrame KeyTime="0%" Value="red"/>
+                <EasingColorKeyFrame KeyTime="33%" Value="Yellow"/>
+                <EasingColorKeyFrame KeyTime="66%" Value="red"/>
+                <EasingColorKeyFrame KeyTime="99%" Value="Yellow"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="elp" Duration="0:0:2" AutoReverse="True" DecelerationRatio="1"
+        RepeatBehavior="Forever">
+                <EasingColorKeyFrame KeyTime="0%" Value="red"/>
+                <EasingColorKeyFrame KeyTime="33%" Value="Yellow"/>
+                <EasingColorKeyFrame KeyTime="66%" Value="red"/>
+                <EasingColorKeyFrame KeyTime="99%" Value="Yellow"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path" Duration="0:0:5">
+                <EasingColorKeyFrame KeyTime="0%" Value="blue"/>
+                <EasingColorKeyFrame KeyTime="66%" Value="#FF0BF900"/>
+                <EasingColorKeyFrame KeyTime="99%" Value="#FF9B1515"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="path" Duration="0:0:5">
+                <EasingColorKeyFrame KeyTime="0%" Value="blue"/>
+                <EasingColorKeyFrame KeyTime="66%" Value="#FF0BF900"/>
+                <EasingColorKeyFrame KeyTime="99%" Value="#FF9B1515"/>
+            </ColorAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.FontWeight)" Storyboard.TargetName="textBlock">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <FontWeight>Bold</FontWeight>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.FontSize)" Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="16"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-56"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="OnLoaded_Copy1">
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="elp" Duration="0:0:5"  AutoReverse="True" DecelerationRatio="1"
+        RepeatBehavior="Forever"  >
+
+                <SplineDoubleKeyFrame KeySpline="1,1 1,1" KeyTime="0%" Value="3" />
+                <SplineDoubleKeyFrame KeySpline="1,1 1,1" KeyTime="33%" Value="15" />
+                <SplineDoubleKeyFrame KeySpline="1,1 1,1" KeyTime="66%" Value="30" />
+                <SplineDoubleKeyFrame KeySpline="1,1 1,1" KeyTime="100%" Value="33" />
+
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard x:Name="OnLoaded1_BeginStoryboard1" Storyboard="{StaticResource OnLoaded1}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <Canvas HorizontalAlignment="Left" Height="334.375" Margin="41,46.125,0,0" VerticalAlignment="Top" Width="698.125">
+            <Border BorderBrush="Black" BorderThickness="1" Height="169.375" Canvas.Left="80.625" Canvas.Top="91.875" Width="486.25" Background="#FF1D5105">
+                <Path x:Name="path" Fill="#FF260187" Stroke="Blue" Data="M10,100 L100,100 L100,50 z" Margin="10.078,7.613,75.705,5.272" RenderTransformOrigin="0.5,0.5" Stretch="Fill">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180.146"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+            </Border>
+            <Ellipse  Name="elp" Fill="Black" Height="100" Canvas.Left="237" Stroke="Black" Canvas.Top="182.625" Width="100" RenderTransformOrigin="0.5,0.5">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+            <TextBlock x:Name="textBlock" Canvas.Left="135" TextWrapping="Wrap" Text="5. Змінювати колір синього трикутника 3 рази." Canvas.Top="32.875" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </Canvas>
+
+    </Grid>
+</Window>

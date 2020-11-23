@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace MarchukBohdanLab3
+{
+    /// <summary>
+    /// Логика взаимодействия для WindowTaskThird.xaml
+    /// </summary>
+    public partial class WindowTaskThird : Window
+    {
+        public WindowTaskThird()
+        {
+            InitializeComponent();
+        }
+        
+        private void next_Click(object sender, RoutedEventArgs e)
+        {
+            frameThird.Navigate(new System.Uri("PageTask2.xaml",
+             UriKind.RelativeOrAbsolute));
+        }
+
+        private void image_Click(object sender, RoutedEventArgs e)
+        {
+            frameThird.Navigate(new System.Uri("PageTask3.xaml",
+             UriKind.RelativeOrAbsolute));
+        }
+
+        private void close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+    }
+}

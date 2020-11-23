@@ -1,0 +1,115 @@
+﻿<Window x:Class="Lab8Marchuk_Bohdan.z2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab8Marchuk_Bohdan"
+        mc:Ignorable="d"
+        Title="z2" Height="450" Width="990.5">
+    <Window.Resources>
+        <Storyboard x:Key="OnLoaded1" >
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="elltwo" Duration="0:0:5" DecelerationRatio="0" >
+
+
+
+                <SplineDoubleKeyFrame   KeyTime="0%" Value="0"/>
+
+                <SplineDoubleKeyFrame   KeyTime="99%" Value="620"/>
+
+
+
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="elltwo" Duration="0:0:5" BeginTime="0:0:5" DecelerationRatio="0">
+                <EasingColorKeyFrame KeyTime="0%" Value="#FFFF1700"/>
+
+                <EasingColorKeyFrame KeyTime="99%" Value="#FF3AFF00"/>
+            </ColorAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="elltwo">
+                <EasingDoubleKeyFrame KeyTime="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="ellone">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="ellone" Duration="0:0:5" AutoReverse="True" RepeatBehavior="Forever" DecelerationRatio="1" >
+                <SplineDoubleKeyFrame  KeySpline="1,1 1,1" KeyTime="0%" Value="0"/>
+                <SplineDoubleKeyFrame  KeySpline="1,1 1,1" KeyTime="33%" Value="50"/>
+                <SplineDoubleKeyFrame  KeySpline="1,1 1,1" KeyTime="66%" Value="100"/>
+                <SplineDoubleKeyFrame  KeySpline="1,1 1,1" KeyTime="99%" Value="200"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.FontWeight)" Storyboard.TargetName="textBlock">
+                <DiscreteObjectKeyFrame KeyTime="0:0:10">
+                    <DiscreteObjectKeyFrame.Value>
+                        <FontWeight>Bold</FontWeight>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.FontSize)" Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="16"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="3.743"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="-52.501"/>
+            </DoubleAnimationUsingKeyFrames>
+
+
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource OnLoaded1}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="951*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="31*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas HorizontalAlignment="Left" Height="350.467" Margin="23.998,14.517,0,0" VerticalAlignment="Top" Width="924.518" RenderTransformOrigin="0.5,0.5">
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.008"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+            <Ellipse x:Name="ellone" Fill="#FFFF1700" Height="99.992" Canvas.Left="17.483" Stroke="Black" Canvas.Top="44.531" Width="228.005" StrokeThickness="6" RenderTransformOrigin="0.5,0.5">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+            <Rectangle Fill="Black" Height="99.992" Canvas.Left="597.517" Stroke="Black" StrokeThickness="6" Canvas.Top="163.019" Width="317.001" RadiusX="10" RadiusY="10"/>
+            <Ellipse x:Name="elltwo" Fill="#FFFF1700" Height="99.992" Canvas.Left="17.483" Stroke="Black" Canvas.Top="163.019" Width="228.005" StrokeThickness="6" RenderTransformOrigin="0.5,0.5">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+            <TextBlock x:Name="textBlock" Canvas.Left="397.611" TextWrapping="Wrap" Text="2. Коли еліпс переміститься у прямокутник, змінити колір еліпса.
+" Canvas.Top="63.492" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </Canvas>
+
+    </Grid>
+</Window>

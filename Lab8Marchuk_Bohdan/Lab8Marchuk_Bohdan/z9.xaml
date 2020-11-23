@@ -1,0 +1,36 @@
+﻿<Window x:Class="Lab8Marchuk_Bohdan.z9"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab8Marchuk_Bohdan"
+        mc:Ignorable="d"
+        Title="z9" Height="450" Width="990.5">
+    <Grid>
+        <Canvas>
+            <Path Stroke="Black" >
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="100,100">
+                            <QuadraticBezierSegment x:Name="seg"  
+                         Point1="200,0" Point2="300,100"  />
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+                <Path.Triggers>
+                    <EventTrigger RoutedEvent="Path.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <PointAnimation Storyboard.TargetName="seg"                 
+                              Storyboard.TargetProperty="Point1"  
+                              From="200,0" To="200,600" Duration="0:0:9" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Path.Triggers>
+            </Path>
+            <TextBlock Canvas.Left="405.677" TextWrapping="Wrap" Text="9. Анімація точки. Модифікувати приклад 5 лекції 8. Анімувати криву, змінюючи координати Point1  та час на 9 секунд." Canvas.Top="45.324" FontWeight="Bold" FontSize="16" Height="55.03" Width="566.823"/>
+        </Canvas>
+
+    </Grid>
+</Window>

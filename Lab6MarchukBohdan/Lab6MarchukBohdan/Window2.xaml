@@ -1,0 +1,26 @@
+﻿<Window x:Class="Lab6MarchukBohdan.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab6MarchukBohdan"
+        mc:Ignorable="d"
+        Title="Window2" Height="450" Width="800">
+    <Grid>
+        <Canvas HorizontalAlignment="Left" Height="319" Margin="58,67,0,0" VerticalAlignment="Top" Width="657" Background="#FFFF2323">
+            <Border BorderBrush="Black" BorderThickness="1" Height="187" Canvas.Left="94" Canvas.Top="72" Width="491" Background="#FF595B59">
+                <Ellipse Fill="#FF616161" Stroke="Black" StrokeThickness="7" RenderTransformOrigin="1,0" Margin="-51,-19,65,28">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="50" Y="21"/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+            </Border>
+        </Canvas>
+
+    </Grid>
+</Window>

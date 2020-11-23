@@ -1,0 +1,24 @@
+﻿<Window x:Class="Lab4MarchukBohdan.Cavans"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab4MarchukBohdan"
+        mc:Ignorable="d"
+        Title="Cavans" Height="450" Width="800">
+    <Grid>
+        <Canvas HorizontalAlignment="Center" Height="249" Margin="180,81,224,0" VerticalAlignment="Top" Width="388" Background="#FF38930D">
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Canvas.Left="85" Canvas.Top="68" Width="211" Background="White" HorizontalAlignment="Center">
+                <Ellipse Stroke="Black">
+                    <Ellipse.Fill>
+                        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                            <GradientStop Color="White" Offset="0" />
+                            <GradientStop Color="Silver" Offset="1" />
+                        </LinearGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+            </Border>
+        </Canvas>
+
+    </Grid>
+</Window>

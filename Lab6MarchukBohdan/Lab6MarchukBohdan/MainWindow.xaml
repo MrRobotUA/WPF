@@ -1,0 +1,32 @@
+﻿<Window x:Class="Lab6MarchukBohdan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab6MarchukBohdan"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas HorizontalAlignment="Left" Height="270" Margin="44,135,0,0" VerticalAlignment="Top" Width="700">
+            <Ellipse Fill="#FF01010E" Height="100" Canvas.Left="10" Stroke="Black" Width="197"/>
+            <Border BorderBrush="Black" BorderThickness="4" Height="129" Canvas.Left="413" Canvas.Top="27" Width="277" Background="#FFFFDC00" CornerRadius="20">
+                <Ellipse Fill="#FF616161" Stroke="Black" StrokeThickness="7" StrokeDashArray="120" RenderTransformOrigin="0,1" Margin="-191,-81,247,102">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="429" Y="-9"/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+            </Border>
+
+        </Canvas>
+        <Button Content="2" HorizontalAlignment="Left" Margin="44,34,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="3" HorizontalAlignment="Left" Margin="124,34,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="4" HorizontalAlignment="Left" Margin="204,34,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <Button Content="5" HorizontalAlignment="Left" Margin="284,34,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_3"/>
+
+    </Grid>
+</Window>

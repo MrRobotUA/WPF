@@ -1,0 +1,105 @@
+﻿<Window x:Class="Lab8Marchuk_Bohdan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab8Marchuk_Bohdan"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="990.5">
+    <Window.Resources>
+        <Storyboard x:Key="OnLoaded1" >
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="elltwo" Duration="0:0:5" DecelerationRatio="1" >
+
+
+
+                <SplineDoubleKeyFrame  KeySpline="1,1 1,1" KeyTime="0%" Value="0"/>
+                <SplineDoubleKeyFrame  KeySpline="1,1 1,1" KeyTime="33%" Value="155"/>
+                <SplineDoubleKeyFrame  KeySpline="1,1 1,1" KeyTime="66%" Value="310"/>
+                <SplineDoubleKeyFrame  KeySpline="1,1 1,1" KeyTime="99%" Value="620"/>
+
+
+
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="elltwo">
+                <EasingDoubleKeyFrame KeyTime="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="ellone">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="ellone" Duration="0:0:5" AutoReverse="True" RepeatBehavior="Forever" DecelerationRatio="1" >
+                <SplineDoubleKeyFrame  KeySpline="1,1 1,1" KeyTime="0%" Value="0"/>
+                <SplineDoubleKeyFrame  KeySpline="1,1 1,1" KeyTime="33%" Value="50"/>
+                <SplineDoubleKeyFrame  KeySpline="1,1 1,1" KeyTime="66%" Value="100"/>
+                <SplineDoubleKeyFrame  KeySpline="1,1 1,1" KeyTime="99%" Value="200"/>
+            </DoubleAnimationUsingKeyFrames>
+
+
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource OnLoaded1}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="951*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="31*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas HorizontalAlignment="Left" Height="350.467" Margin="23.998,14.517,0,0" VerticalAlignment="Top" Width="924.518" RenderTransformOrigin="0.5,0.5">
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.008"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+            <Ellipse x:Name="ellone" Fill="#FFFF1700" Height="99.992" Canvas.Left="17.483" Stroke="Black" Canvas.Top="44.531" Width="228.005" StrokeThickness="6" RenderTransformOrigin="0.5,0.5">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+            <Rectangle Fill="Black" Height="99.992" Canvas.Left="597.517" Stroke="Black" StrokeThickness="6" Canvas.Top="163.019" Width="317.001" RadiusX="10" RadiusY="10"/>
+            <Ellipse x:Name="elltwo" Fill="#FFFF1700" Height="99.992" Canvas.Left="17.483" Stroke="Black" Canvas.Top="163.019" Width="228.005" StrokeThickness="6" RenderTransformOrigin="0.5,0.5">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+            <TextBlock Canvas.Left="343.541" TextWrapping="Wrap" Text="1. Розмістити в контейнері Canvas 2 еліпси і прямокутник з округленими кутами. Використати для еліпсів товсті контури та забарвлення червоним кольором. Для прямокутника товстий контур та чорний колір фону. Перемісти один з еліпсів так, щоб він вписався у прямокутник.
+Початкове положення Анімація вздовж  осі Х та Y.
+Перемістити нижній еліпс у прямокутник (1 раз) з інтервалом 5 с. Верхній еліпс переміщувати згори донизу у неперервному циклі.
+
+" Height="153.019" Width="580.977" FontWeight="Bold" FontSize="16"/>
+        </Canvas>
+        <Button Content="Задание 2" Name="z2" HorizontalAlignment="Left" Margin="71,377.663,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_z2"/>
+        <Button Content="Задание 3" Name="z3" HorizontalAlignment="Left" Margin="151,377.663,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_z3"/>
+        <Button Content="Задание 4" Name="z4" HorizontalAlignment="Left" Margin="231,377.663,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_z4"/>
+        <Button Content="Задание 4.1" Name="z41" HorizontalAlignment="Left" Margin="311,377.663,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_z41"/>
+        <Button Content="Задание 5" Name="z5" HorizontalAlignment="Left" Margin="391,377.663,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_z5"/>
+        <Button Content="Задание 6" Name="z6" HorizontalAlignment="Left" Margin="471,377.663,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_z6"/>
+        <Button Content="Задание 7" Name="z7" HorizontalAlignment="Left" Margin="551,377.663,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_z7"/>
+        <Button Content="Задание 8" Name="z8" HorizontalAlignment="Left" Margin="631,377.663,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_z8"/>
+        <Button Content="Задание 9" Name="z9" HorizontalAlignment="Left" Margin="711,377.663,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_z9"/>
+        <Button Content="Задание 10" Name="z10" HorizontalAlignment="Left" Margin="791,377.663,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_z10"/>
+
+
+
+
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,89 @@
+﻿<Window x:Class="lab7marchuk.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab7marchuk"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Storyboard x:Key="OnLoaded1">
+           
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="post">
+                <EasingDoubleKeyFrame KeyTime="0" Value="500"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.8" Value="986"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="post">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-103"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.8" Value="-206"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="ellipse"  Duration="0:0:24" AutoReverse="True"
+        RepeatBehavior="Forever" DecelerationRatio="1" >
+                <EasingDoubleKeyFrame KeyTime="0" Value="3.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="221.25"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="3.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9.5" Value="221.25"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12" Value="3.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15.5" Value="221.25"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:18" Value="3.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:21.5" Value="221.25"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:24" Value="3.75"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="ellipse"  Duration="0:0:24" AutoReverse="True"
+        RepeatBehavior="Forever" DecelerationRatio="1" >
+                <EasingDoubleKeyFrame KeyTime="0" Value="14.0625"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="34.688"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="16.875"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9.5" Value="34.688"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12" Value="16.875"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15.5" Value="34.688"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:18" Value="16.875"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:21.5" Value="34.688"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:24" Value="16.875"/>
+
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="ellipse"  Duration="0:0:24" AutoReverse="True"
+        RepeatBehavior="Forever" DecelerationRatio="1" >
+                <EasingPointKeyFrame KeyTime="0" Value="0.5,0.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:3.5" Value="0.527,0.572"/>
+            </PointAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource OnLoaded1}"/>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Canvas Name="MainCanvas"  HorizontalAlignment="Left" Height="350" Margin="27,30,0,0" VerticalAlignment="Top" Width="728">
+        <Ellipse Name="ellipse" Fill="#FFFF0202" Height="96" Canvas.Left="10" Stroke="Black" Canvas.Top="10" Width="205" StrokeThickness="4" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Border BorderBrush="Black" BorderThickness="1" Height="100" Canvas.Left="494" Canvas.Top="10" Width="224" Background="#FF1B1B1B" CornerRadius="10"/>
+        <Ellipse x:Name="post" Fill="#FFFF0202" Height="96" Canvas.Left="-479.375" Stroke="Black" Canvas.Top="217.875" Width="205" StrokeThickness="4" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+
+        </Ellipse>
+        <Button Content="Задание 2" Canvas.Left="144" Name="z2" Canvas.Top="360.25" Width="75" Click="z2_click"/>
+        <Button Content="Задание 3" Canvas.Left="224" Name="z3" Canvas.Top="360.25" Width="75" Click="z3_click"/>
+        <Button Content="Задание 4" Canvas.Left="304" Name="z4" Canvas.Top="360.25" Width="75" Click="z4_click"/>
+        <Button Content="Задание 5" Canvas.Left="383" Name="z5" Canvas.Top="360.25" Width="75" Click="z5_click"/>
+
+    </Canvas>
+
+
+</Window>

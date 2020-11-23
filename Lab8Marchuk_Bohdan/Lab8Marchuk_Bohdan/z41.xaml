@@ -1,0 +1,45 @@
+﻿<Window x:Class="Lab8Marchuk_Bohdan.z41"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab8Marchuk_Bohdan"
+        mc:Ignorable="d"
+        Title="z41" Height="450" Width="800">
+    <Window.Resources>
+        <Storyboard x:Key="OnLoaded1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="ellipse" Duration="0:0:5"  AutoReverse="True" DecelerationRatio="1"
+        RepeatBehavior="Forever">
+                <EasingDoubleKeyFrame KeyTime="0%" Value="10"/>
+                <EasingDoubleKeyFrame KeyTime="20%" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="40%" Value="40"/>
+                <EasingDoubleKeyFrame KeyTime="60%" Value="60"/>
+                <EasingDoubleKeyFrame KeyTime="80%" Value="80"/>
+                <EasingDoubleKeyFrame KeyTime="100%" Value="112"/>
+                
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="ellipse" Duration="0:0:5"  AutoReverse="True" DecelerationRatio="1"
+        RepeatBehavior="Forever">
+                <EasingColorKeyFrame KeyTime="0%" Value="black"/>
+                <EasingColorKeyFrame KeyTime="20%" Value="#FF21D804"/>
+                <EasingColorKeyFrame KeyTime="40%" Value="#FF05C55C"/>
+                <EasingColorKeyFrame KeyTime="80%" Value="#FF74FF00"/>
+                <EasingColorKeyFrame KeyTime="100%" Value="#FFD3371F"/>
+                
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource OnLoaded1}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <Canvas HorizontalAlignment="Left" Height="298.75" Margin="29.75,59.25,0,0" VerticalAlignment="Top" Width="683.125">
+            <Ellipse x:Name="ellipse" Fill="#FF00F300" Height="223.75" Canvas.Left="69.375" Stroke="Black" Canvas.Top="35.625" Width="525.625" StrokeThickness="10"/>
+        </Canvas>
+        <TextBlock HorizontalAlignment="Left" Margin="29.75,22.33,0,0" TextWrapping="Wrap" Text="4. Розмістити еліпс з товстим контуром. Змінувати товщину його контуру у неперевному циклі так, щоб колір заповнював увесь еліпс. Змінювати колір контуру.
+" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Width="719.17"/>
+
+    </Grid>
+</Window>
